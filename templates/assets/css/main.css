@@ -1,0 +1,265 @@
+/**
+ * main.css
+ */
+
+/*********************************************************************
+ * General HTML tags
+ *
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+}
+
+body, td, input[type=text], textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 105%;
+    line-height: 1.8em;
+    color: #444;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+h3 {
+    border-top: 1px solid #eee;
+    padding-top: 1em;
+    color: #777;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* Top-bar customization */
+.top-bar, .top-bar ul, .top-bar-left {
+    background-color: #121212;
+    padding: 0;
+}
+    .topbar ul a {
+        color: #eceeef;
+    }
+    .menu, .menu a {
+        color: #eceeef;
+    }
+    .menu a:hover {
+        background: #060606;
+    }
+    .menu .active > a {
+        background: #121212;
+        color: #eceeef;
+    }
+    .top-bar .search {
+        margin-right: 0;
+        border-radius: 3px;
+        font-style: italic;
+    }
+
+.minimal-topbar {
+    z-index: 2;
+    position: relative;
+}
+    .minimal-topbar ul:first-child {
+        float: left;
+    }
+    .minimal-topbar .menu:last-child {
+        border-left: 1px solid #4e4e4e;
+    }
+    .minimal-topbar .menu li {
+        border-right: 1px solid #4e4e4e;
+    }
+
+/* Meanmenu customization */
+.mean-container .mean-bar, .mean-container .mean-bar ul li {
+    background: #121212;
+}
+    .mean-container .mean-nav ul li a.mean-expand {
+        background: transparent;
+    }
+
+
+/* search form on mobile */
+.mobile-search-form  {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+    .mobile-search-form input {
+        color: #ffffff;
+        background: transparent;
+        border: none;
+        border-top: 1px solid rgba(255,255,255,.5);
+        border-bottom: 1px dashed #bebcc5;
+        height: 3.125em;
+        outline: none;
+        padding: 0 5%;
+        font-style: italic;
+    }
+    .mobile-search-form input:focus {
+        border-bottom: 1px dashed #ffffff;
+    }
+    
+/* Utilities */
+.align_left {
+    float: left;
+    margin: 0 1em 0.25em 0;
+}
+
+.align_right {
+    float: right;
+    margin: 0 0 0.25em 1em;
+}
+
+.align_center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.display-3 {
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+.m-t-0 {
+    margin-top: 0 !important;
+}
+
+    .m-t-1 {
+        margin-top: 1rem !important;
+    }
+
+    .m-t-2 {
+        margin-top: 1.5rem !important;
+    }
+
+    .m-t-3 {
+        margin-top: 3rem !important;
+    }
+
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: .75rem 1rem;
+    margin-top: 1em;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #f7f7f9;
+    border-radius: .25rem;
+}
+
+/*  Jumbotron  */
+.jumbotron {
+    padding: 4rem 2rem;
+}
+    .jumbotron {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+        background-color: #eceeef;
+        border-radius: .25rem;
+    }
+
+/*
+ * Slick carousel customization
+ */
+.main-carousel {
+    width: 100%;
+    padding: 0;
+}
+    .main-carousel .slick-prev {
+        left: 25px;
+        z-index: 1;
+    }
+    .main-carousel .slick-prev::before {
+        color: #ffffff;
+    }
+    .main-carousel .slick-next {
+        right: 25px;
+        z-index: 1;
+    }
+    .main-carousel .slick-next::before {
+        color: #ffffff;
+    }
+    .main-carousel .slick-dots li button::before {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+/* callouts */
+.container-hover {
+    margin-bottom: 2rem;
+    border-radius: 3px;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.25rem;
+    transition: all .25s ease-in-out;
+}
+    .container-hover:hover {
+        background: #f8f8f8;
+        transition: all .25s ease-in-out;
+    }
+    .framework-callouts h6 {
+        color: #777777;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .framework-callouts .link {
+        color: #1d92cf;
+        text-align: center;
+    }
+    .container-hover .link {
+        color: #1d92cf;
+    }
+    .framework-callouts p {
+        margin-top: 20px;
+        color: #222222;
+    }
+    .container-hover p {
+        color: #333;
+    }
+    .framework-callouts p {
+        margin-top: 20px;
+        color: #222222;
+    }
+
+
+/*
+ * Footer
+ */
+
+#footer {
+    clear: both;
+    border-top: 1px solid #eee;
+    font-size: 80%;
+}
+
+/*
+ * Media queries for responsive layout
+ */
+@media only screen and (max-width: 639px) {
+    /* breadcrumbs adjustment */
+    .breadcrumbs {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* mobile layout */
+    body, td, textarea {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    /* extra-wide desktop layout */
+    body, td, textarea, footer {
+        font-size: 115%;
+    }
+}
